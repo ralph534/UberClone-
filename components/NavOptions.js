@@ -2,6 +2,9 @@ import { Text, View, FlatList, TouchableOpacity, Image } from 'react-native'
 import { Icon } from 'react-native-elements'
 import React from 'react'
 import tw from 'tailwind-react-native-classnames'
+import { NavigationContainer, StackActions, useNavigation } from '@react-navigation/native';
+
+
 
 
 const data = [
@@ -20,13 +23,16 @@ const data = [
 ]
 
 const NavOptions = () => {
+
+  const navigation = useNavigation();
+
   return (
     <FlatList
     data={data}
     horizontal
     keyExtractor={(item) => item.id}
     renderItem={({item}) => (
-      <TouchableOpacity style={tw `bg-gray-200 p-2 pl-6 pb-8 pt-4 m-2 w-40`}>
+      <TouchableOpacity onPress={() => navigation.navigate(item.screen)} style={tw `bg-gray-200 p-2 pl-6 pb-8 pt-4 m-2 w-40`}>
           <View>
             <Image
             style= {{width: 120, height: 120, resizeMode: 'conatin'}}

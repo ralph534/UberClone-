@@ -16,7 +16,6 @@ const HomeScreen = () => {
         source={{
             uri: 'https://links.papareact.com/gzs'
         }}/>
-
     <NavOptions/>
       </View>
     </SafeAreaView>
