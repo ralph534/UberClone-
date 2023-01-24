@@ -43,7 +43,7 @@ const NavOptions = () => {
             <Icon 
             style={tw `bg-black p-2 rounded-full w-10 mt-4`}
             name= "arrowright"
-            color= "blue"
+            color= "white"
              type="antdesign"
             />
           </View>
